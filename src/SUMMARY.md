@@ -4,7 +4,7 @@
 
 [Introduction](Introduction.md)
 
-# Humanity
+# Stage 0: Humanity in 2025
 
 - [Current State Of The World](Stage_1/1_1_Current_State_Of_The_World.md)
 
