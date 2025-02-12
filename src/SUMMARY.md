@@ -4,7 +4,7 @@
 
 [Introduction](Introduction.md)
 
-# Stage 1: Passive AI Watchdog
+# Humanity
 
 - [Current State Of The World](Stage_1/1_1_Current_State_Of_The_World.md)
 
@@ -21,6 +21,10 @@
 
 - [Current State Of AI]()
 - [Human Sentiment of such a project]()
+
+# Stage 1: Passive AI Watchdog
+
+- [Passive AI Watchdog Framework]()
 
 # Stage 2: AGI & Sentience
 
