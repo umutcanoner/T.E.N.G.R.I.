@@ -1,0 +1,84 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Book",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-Command",
+                "mdbook build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Serve Book (Live Reload)",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-Command",
+                "mdbook serve --open"
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "isBackground": true
+        },
+        {
+            "label": "Clean Book",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-Command",
+                "mdbook clean"
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Install Test Backend",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-Command",
+                "cargo install mdbook-linkcheck"
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Test Links",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-Command",
+                "if (!(Get-Command mdbook-linkcheck -ErrorAction SilentlyContinue)) { Write-Host 'mdbook-linkcheck is not installed. Please run the \"Install Test Backend\" task first.' -ForegroundColor Red; exit 1 } else { mdbook test }"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
