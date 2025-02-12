@@ -1,6 +1,6 @@
 # Summary
 
-[README](README.md)
+[Summary](README.md)
 [Introduction](Introduction.md)
 
 # Stage 1: Passive AI Watchdog
